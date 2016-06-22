@@ -21,10 +21,11 @@ namespace RSData
 		private static string text_itemSearchButton = "Search";
 		private static int[] 	size_itemSearchButton = {75, 25};
 
+		private static rs_api rsTools = new rs_api();
 
 		//	WebBrowser
 		private static WebView client = new WebView();
-
+	
 		public static void Main (string[] args)
 		{
 			Application.Init ();
@@ -59,12 +60,21 @@ namespace RSData
 			Application.Run ();
 		}
 
+		// Search button callback
 		static void callback(object e, EventArgs args)
 		{
-			Console.WriteLine ("Attempting to open: "+itemSearchField.Text);
-			client.Open (itemSearchField.Text);
+			//Replace convert to int with appropriate handling	
+			string queryItem = rsTools.item_price_information (itemSearchField.Text);
+
+			Console.WriteLine ("Attempting to open: " + queryItem);
+
+			client.Open (queryItem);
+
+
 		}
 
+		// Used to iterate over available items to give user a autosuggestion list
+		// this will be removed after adding a class for items
 		static TreeModel createAutoSuggestions()
 		{
 

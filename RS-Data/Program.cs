@@ -35,7 +35,7 @@ namespace RSData
 
 			//Set web browser initial settings
 			client.SetSizeRequest ( _WindowSize[0], _WindowSize[1]-40);
-			client.Open ("https://www.youtube.com/");
+			client.Open ("webserver/welcome.html");
 			scrollWindow.Add (client);
 
 			//Searchbox properties
@@ -43,6 +43,8 @@ namespace RSData
 			itemSearchField.Completion = new EntryCompletion ();
 			itemSearchField.Completion.Model = createAutoSuggestions ();
 			itemSearchField.Completion.TextColumn = 0;
+			itemSearchField.InsertText("Item Name");
+			itemSearchField.KeyPressEvent += kbCallback;
 			//Button Properties
 			itemSearchButton.Label = text_itemSearchButton;
 			itemSearchButton.SetSizeRequest (size_itemSearchButton[0], size_itemSearchButton[1]);
@@ -71,6 +73,15 @@ namespace RSData
 			client.Open (queryItem);
 
 
+		}
+			
+		// Keyboard handler for searchbox.
+		[GLib.ConnectBefore]
+		static void kbCallback(object e, Gtk.KeyPressEventArgs args)
+		{
+			//If enter then search for item.
+			if (args.Event.Key == Gdk.Key.Return)
+				client.Open (rsTools.item_price_information (itemSearchField.Text));
 		}
 
 		// Used to iterate over available items to give user a autosuggestion list

@@ -3,8 +3,8 @@ web application for calculating and visualizing item price differentiation using
 
 ![img](http://i.imgur.com/BKITsrY.png)
 
-Todo:
-[X] graphing GE prices with id search
-[ ] item lookup via name rather than ID
-[ ] user defined watch list
-[ ] most profitible alch list
+Todo:<br>
+[X] graphing GE prices with id search <br>
+[ ] item lookup via name rather than ID <br>
+[ ] user defined watch list <br>
+[ ] most profitible alch list <br>

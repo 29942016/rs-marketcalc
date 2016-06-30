@@ -1,6 +1,0 @@
-/home/Oliver/Documents/Programming/CSharp/RS-Data/RS-Data/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/Oliver/Documents/Programming/CSharp/RS-Data/RS-Data/obj/x86/Debug/RSData.gtk-gui.gui.stetic
-/home/Oliver/Documents/Programming/CSharp/RS-Data/RS-Data/bin/Debug/RS-Data.exe.mdb
-/home/Oliver/Documents/Programming/CSharp/RS-Data/RS-Data/bin/Debug/RS-Data.exe
-/home/Oliver/Documents/Programming/CSharp/RS-Data/RS-Data/obj/x86/Debug/RS-Data.exe
-/home/Oliver/Documents/Programming/CSharp/RS-Data/RS-Data/obj/x86/Debug/RS-Data.exe.mdb
